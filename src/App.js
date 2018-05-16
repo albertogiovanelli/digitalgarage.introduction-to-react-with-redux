@@ -11,7 +11,6 @@ class App extends Component {
     render() {
         return (
             <div>
-                <img src={dg}/>
                 <div className="login">
                     <LoginPage/>
                 </div>
