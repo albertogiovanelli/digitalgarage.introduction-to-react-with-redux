@@ -11,7 +11,6 @@ export const fakeLogin = async ({username, password}) => {
     }
 };
 
-export const getData = async (accessToken) => {
-    const credentials = await jwt.verify(accessToken, 'digitalgarage');
-    console.log("credentials", credentials);
+export const getData = (accessToken) => {
+    return jwt.verify(accessToken, 'digitalgarage');
 };

@@ -10,7 +10,7 @@ import './Button.css';
 const Button = (props) => (
     <button
         className={classNames('btn', props.className)}
-        type="button"
+        type={props.type}
         onClick={props.onClick}
         disabled={props.disabled}>
         <FlexContainer className="justify-center">
@@ -22,10 +22,11 @@ const Button = (props) => (
 
 Button.propTypes = {
     label: string.isRequired,
-    onClick: func.isRequired,
+    onClick: func,
     disabled: bool,
     className: string,
-    icon:string
+    icon:string,
+    type:string.isRequired
 };
 
 Button.defaultProps = {
